@@ -16,8 +16,8 @@
       <span>{{toDo.item}}</span>
       <span>Done</span>
     </li>
-    <input type="text" v-on:keyup.enter="saveNewtoDo" v-model="newtoDo">
-    <button>Add to-do item</button>
+    <input type="text" v-on:keyup.enter="saveNewToDo" v-model="newToDo" />
+    <button @click="saveNewToDo">Add to-do item</button>
 	</ul>
 	</div>
 </body>

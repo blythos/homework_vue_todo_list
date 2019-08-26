@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		methods: {
 			saveNewToDo: function() {
 				if (this.newToDo !== "") {
-					const itemToAdd = {name: this.newToDo, done: false};
-					this.toDos.push(itemToAdd);
+					const toDoToAdd = {item: this.newToDo, done: false};
+					this.toDos.push(toDoToAdd);
 					this.newToDo = "";
 				}
 			},
-			buyItem: function(index) {
-				this.items[index].purchased = true;
+			isDone: function(index) {
+				this.toDos[index].done = true;
 			}
 		}
 	});
