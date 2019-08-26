@@ -29,6 +29,10 @@ li button {
 	cursor: pointer;
 }
 
+li.done {
+	text-decoration: line-through;
+}
+
 li.low {
 	border: 2px solid #1a681e;
 	color: #1a681e;
@@ -36,6 +40,8 @@ li.low {
 
 li.high {
 	border: 2px solid #f2360c;
+	color: #f2360c;
+	font-weight: bolder;
 }
 
 input[type="text"] {

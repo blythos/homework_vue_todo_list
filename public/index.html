@@ -16,9 +16,10 @@
 		<input type="radio" v-model="newToDoPriority" id="low" value="low"><label for="low">Low</label> &nbsp;
 		<button @click="saveNewToDo">Add to-do item</button>
 		<ul>
-			<li v-for="(toDo, index) in toDos" v-bind:class="toDo.priority === 'high' ? 'high':'low'">
+			<li v-for="(toDo, index) in toDos" v-bind:class="[toDo.priority === 'high' ? 'high':'low', toDo.done ? 'done' : 'notDone']">
 				<span>{{toDo.item}}</span>
-				<span>{{toDo.priority}}</span>
+				<span v-if="toDo.done">Done!</span>
+				<button v-if="!toDo.done" @click="isDone(index)">Mark as done!</button>
 			</li>
 		</ul>
 	</div>
