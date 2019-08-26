@@ -11,14 +11,16 @@
 </head>
 <body>
 	<div id="app">
-	<ul>
-    <li v-for="toDo in toDos">
-      <span>{{toDo.item}}</span>
-      <span>Done</span>
-    </li>
-    <input type="text" v-on:keyup.enter="saveNewToDo" v-model="newToDo" />
-    <button @click="saveNewToDo">Add to-do item</button>
-	</ul>
+		<input type="text" v-on:keyup.enter="saveNewToDo" v-model="newToDo" /> Priority: &nbsp;
+		<input type="radio" v-model="newToDoPriority" id="high" value="high"><label for="high">High</label>
+		<input type="radio" v-model="newToDoPriority" id="low" value="low"><label for="low">Low</label> &nbsp;
+		<button @click="saveNewToDo">Add to-do item</button>
+		<ul>
+			<li v-for="toDo in toDos">
+				<span>{{toDo.item}}</span>
+				<span>{{toDo.priority}}</span>
+			</li>
+		</ul>
 	</div>
 </body>
 </html>
