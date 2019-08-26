@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					const toDoToAdd = {item: this.newToDo, done: false, priority: this.newToDoPriority};
 					this.toDos.push(toDoToAdd);
 					this.newToDo = "";
+					newToDoPriority = "";
 				}
 			},
 			isDone: function(index) {
